@@ -1,0 +1,6 @@
+- Import file yang ada pada folder DB ke phpMyAdmin
+- Buka pada terminal folder Server ketik "nodemon npm start"
+- Setelah server berjalan, buka pada terminal folder Client
+- Ketik "npm run dev"
+- Untuk melihat data sudah sukses di tambah/update/delete, sementara bisa di reload secara manual
+  untuk melihat perubahannya
