@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fungsi 2</title>
+  </head>
+  <body>
+    <script>
+      function buatBangunText(jumlahBaris) {
+        let hasil = "";
+
+        for (let i = 0; i < jumlahBaris; i++) {
+          let jumlahBintang = 2 * (jumlahBaris - i) - 1;
+          hasil += "*".repeat(jumlahBintang) + "\n";
+        }
+
+        return hasil;
+      }
+
+      // Contoh penggunaan fungsi
+      let contoh1 = buatBangunText(3);
+      console.log(contoh1);
+      // Hasil:
+      // *****
+      // ***
+      // *
+
+      let contoh2 = buatBangunText(5);
+      console.log(contoh2);
+      // Hasil:
+      // *********
+      // *******
+      // *****
+      // ***
+      // *
+
+      let contoh3 = buatBangunText(prompt("Masukkan Jumlah Baris"));
+      console.log(contoh3);
+    </script>
+  </body>
+</html>

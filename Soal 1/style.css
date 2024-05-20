@@ -1,0 +1,319 @@
+#logo2 {
+  display: block;
+}
+
+#logo1 {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  #logo2 {
+    display: none;
+  }
+
+  #logo1 {
+    display: block;
+  }
+}
+
+.art-gallery {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.art-img {
+  width: 100px;
+  height: auto;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.display-4 {
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.lead {
+  margin-bottom: 20px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #000;
+  border-radius: 50%;
+}
+
+#about {
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+#about .container {
+  position: relative;
+}
+
+#about img {
+  max-width: 100%;
+  border-radius: 10px; /* Optional: to give the image rounded corners */
+}
+
+#about h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn-custom {
+  color: #28a745; /* Green text */
+  border: 2px solid #28a745; /* Green border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-weight: bold; /* Bold text */
+  background-color: transparent; /* Transparent background */
+  transition: background-color 0.3s, color 0.3s; /* Transition effect */
+}
+
+.btn-custom:hover {
+  color: white; /* White text on hover */
+  background-color: #28a745; /* Green background on hover */
+}
+
+#about .row {
+  align-items: center;
+}
+
+#about .col-md-6 img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about .col-md-6 {
+  text-align: left;
+}
+
+.working-areas {
+  background-color: #000;
+  color: #fff;
+  background-image: url("pattern.png"); /* Replace with your background pattern */
+  background-size: cover;
+}
+
+.working-areas h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.products {
+  background-color: #e9ecef;
+}
+
+.products h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.nav-link.section2 {
+  font-size: 1.1rem;
+  color: #28a745;
+  margin: 0 10px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #28a745;
+}
+
+.card {
+  margin-bottom: 30px;
+  border: none;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.badge-success {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.9rem;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.rating span {
+  font-size: 1rem;
+  color: #ffc107;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#testimonials {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+#testimonials h2 {
+  margin-bottom: 30px;
+}
+
+.testimonial blockquote {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.customer-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.customer-location {
+  color: #777;
+}
+
+.video {
+  position: relative;
+  display: inline-block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+}
+
+#portfolio {
+  padding: 50px 0;
+}
+
+#portfolio h2 {
+  margin-bottom: 30px;
+}
+
+.view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.view-more button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 1.2em;
+}
+
+#contact {
+  background-color: #333;
+  color: white;
+}
+
+#contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+#contact .btn-primary {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+#footer {
+  background-color: #f8f9fa;
+  padding-bottom: 20px;
+}
+
+#footer h5 {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+#footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+#footer ul li a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#footer address {
+  font-style: normal;
+  color: #6c757d;
+}
+
+.social-media a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-media img {
+  width: 24px;
+  height: 24px;
+}

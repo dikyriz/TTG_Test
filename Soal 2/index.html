@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal 2</title>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+
+    <style>
+      .App {
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .timer {
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+
+      .buttons button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .flags {
+        margin-top: 20px;
+      }
+
+      .flags ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .flags li {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="App"></div>
+
+    <script type="text/babel">
+      const { useState, useRef } = React;
+
+      function App() {
+        const [time, setTime] = useState(0);
+        const [running, setRunning] = useState(false);
+        const [flags, setFlags] = useState([]);
+        const intervalRef = useRef(null);
+
+        const formatTime = (time) => {
+          const minutes = String(Math.floor(time / 60000)).padStart(2, "0");
+          const seconds = String(Math.floor((time % 60000) / 1000)).padStart(
+            2,
+            "0"
+          );
+          const milliseconds = String(time % 1000).padStart(3, "0");
+          return `${minutes}:${seconds}.${milliseconds}`;
+        };
+
+        const startPauseTimer = () => {
+          if (running) {
+            clearInterval(intervalRef.current);
+          } else {
+            const startTime = Date.now() - time;
+            intervalRef.current = setInterval(() => {
+              setTime(Date.now() - startTime);
+            }, 1);
+          }
+          setRunning(!running);
+        };
+
+        const stopTimer = () => {
+          clearInterval(intervalRef.current);
+          setTime(0);
+          setRunning(false);
+        };
+
+        const flagTime = () => {
+          setFlags([...flags, time]);
+        };
+
+        return (
+          <div className="App">
+            <h1>Stopwatch</h1>
+            <div className="timer">{formatTime(time)}</div>
+            <div className="buttons">
+              <button onClick={startPauseTimer}>
+                {running ? "Pause" : "Start"}
+              </button>
+              <button onClick={stopTimer}>Stop</button>
+              <button onClick={flagTime}>Flag</button>
+            </div>
+            <div className="flags">
+              <h2>Flags</h2>
+              <ul>
+                {flags.map((flag, index) => (
+                  <li key={index}>{formatTime(flag)}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        );
+      }
+
+      // Render it
+      ReactDOM.render(<App />, document.getElementById("App"));
+    </script>
+  </body>
+</html>

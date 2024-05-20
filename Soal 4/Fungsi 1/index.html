@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fungsi 1</title>
+  </head>
+  <body>
+    <script>
+      function buatKelompokBilanganGenap(jumlahBilangan, jumlahKelompok) {
+        // Membuat array bilangan genap
+        let bilanganGenap = [];
+
+        for (let i = 0; i < jumlahBilangan; i++) {
+          bilanganGenap.push(2 * (i + 1));
+        }
+
+        // Membuat array hasil untuk menampung kelompok bilangan genap
+        let hasil = [];
+        let ukuranKelompok = Math.ceil(jumlahBilangan / jumlahKelompok);
+
+        // Mengelompokkan bilangan genap
+        for (let i = 0; i < jumlahBilangan; i += ukuranKelompok) {
+          hasil.push(bilanganGenap.slice(i, i + ukuranKelompok));
+        }
+
+        return hasil;
+      }
+
+      //   // Contoh penggunaan fungsi
+      //   let contoh1 = buatKelompokBilanganGenap(10, 2);
+      //   console.log(contoh1); // Hasil: [[2, 4, 6, 8, 10], [12, 14, 16, 18, 20]]
+
+      //   let contoh2 = buatKelompokBilanganGenap(7, 3);
+      //   console.log(contoh2); // Hasil: [[2, 4], [6, 8], [10, 12, 14]]
+
+      let contoh3 = buatKelompokBilanganGenap(
+        prompt("Masukkan Jumlah Bilangan"),
+        prompt("Masukkan Jumlah Kelompok")
+      );
+      console.log(contoh3);
+    </script>
+  </body>
+</html>
